@@ -82,10 +82,10 @@ public:
 
     Empleado operator +(Empleado & JefePlanta) {
        int nuevaClave = ClaveEmpleado + JefePlanta.GetClaveEmpleado();
-       std::string nuevoNombre= Nombre + JefePlanta.GetNombre();
-       std::string nuevoDomicilio = Domicilio + JefePlanta.GetDomicilio();
+       std::string nuevoNombre= Nombre + " & " + JefePlanta.GetNombre();
+       std::string nuevoDomicilio = Domicilio + " & " + JefePlanta.GetDomicilio();
        float nuevoSueldo = Sueldo + JefePlanta.GetSueldo();
-       std::string nuevoReportaA = ReportaA + JefePlanta.GetReportaA();
+       std::string nuevoReportaA = ReportaA + " & " + JefePlanta.GetReportaA();
       return Empleado(nuevaClave, nuevoNombre, nuevoDomicilio, nuevoSueldo, nuevoReportaA);
 
     }
@@ -123,29 +123,30 @@ public:
        Empleado JefePersonal(1452, "Manuel", "Soledad #500", 3000, "Manuel");
 
        std::cin>>JefePlanta;
-       //std::cin>>JefePersonal;
        std::cout<<JefePlanta;
        //std::cout<<JefePersonal;
 
        int opcion;
 
-      /* Empleado j1 = JefePersonal + JefePlanta;
+       /*Empleado j1 = JefePersonal + JefePlanta;
        j1.Imprime();
 
        if (JefePlanta < JefePersonal) {
-
-        cout<<"Es correcto";
+        cout<<"Es correcto: gana menos\n ";
        } else {
-          cout<<"Gana mas";
+          cout<<"Gana mas\n ";
        }
 
        if (JefePersonal == JefePlanta){
-
-          cout<<"Son la misma persona";
+        cout<<"Son la misma persona \n";
        }  else{
-         cout<<"No son la misma persona";
-       } */
+         cout<<"No son la misma persona \n";
+       }
 
+       if(JefePersonal != JefePlanta){
+        cout<<"Es diferente jefe\n ";
+       } else{
+       cout<<"Son el mismo jefe\n ";  } */
 
    do {
        cout <<"1.Imprimir datos" <<endl;
