@@ -98,17 +98,25 @@ int main()
     Materia BasesDatos(10, "Bases de datos", "Samuel", "Bases de datos VI");
 
     std::cin>>BasesDatos;
-    //std::cout<<"Valores de Bases de datos";
     std::cout<<BasesDatos;
      int opcion;
 
     /* Materia m3= Programacion + BasesDatos;
      m3.Imprime();
      if (Programacion > BasesDatos) {
-    cout << "CORRECTO: es mayor";
+    cout << "CORRECTO: es mayor ";
 }  else {
-   cout<<""; } */
+   cout<<""; }
 
+     if(BasesDatos < Programacion){
+        cout<<"Verdadero: es menor ";
+     }
+     if(BasesDatos == BasesDatos){
+        cout<<"Es la misma materia ";
+     }
+     if(BasesDatos != Programacion){
+        cout<<"Si, es una materia diferente";
+     } */
 
   do{
      cout<<("1. Imprimir datos materia Base de datos \n");
