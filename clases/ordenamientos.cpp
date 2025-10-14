@@ -155,7 +155,7 @@ void Lista::imprime() const {
             std::cout << std::string(80, '-') << std::endl;
         }
     } else {
-        std::cout << "\nLa lista está vacía." << std::endl;
+        std::cout << "\nLa lista estÃ¡ vacÃ­a." << std::endl;
     }
 }
 
@@ -181,7 +181,6 @@ void Lista::insertarAlFinal(Solicitud elem) {
 
 void Lista::mostrarSolicitud(int pos) const {
     if (pos >= 0 && pos <= ult) {
-        std::cout << "\n=== SOLICITUD ENCONTRADA ===" << std::endl;
         std::cout << "Nombre: " << datos[pos].getNombre() << std::endl;
         std::cout << "Carrera: " << datos[pos].getCarrera() << std::endl;
         std::cout << "Preparatoria: " << datos[pos].getPreparatoria() << std::endl;
@@ -242,7 +241,7 @@ void Lista::ordenamientoInsercionNombre() {
     }
 }
 
-// Búsqueda binaria por NOMBRE
+// BÃºsqueda binaria por NOMBRE
 int Lista::busquedaBinaria(std::string nombre) {
     int i = 0, j = ult;
     while (i <= j) {
@@ -262,7 +261,7 @@ int Lista::busquedaBinaria(std::string nombre) {
 
 void darDeAltaSolicitud(Lista& listaPromedio, Lista& listaNombre) {
     if (listaPromedio.llena()) {
-        std::cout << "\nLa lista está llena. No se pueden agregar más solicitudes." << std::endl;
+        std::cout << "\nLa lista estÃ¡ llena. No se pueden agregar mÃ¡s solicitudes." << std::endl;
         return;
     }
 
@@ -320,10 +319,9 @@ int main() {
     int opcion;
 
     do {
-         std::cout << "   SISTEMA DE SOLICITUDES - MENU" << std::endl;
     std::cout << "1. Dar de alta solicitud" << std::endl;
     std::cout << "2. Buscar solicitud (Busqueda Binaria)" << std::endl;
-    std::cout << "3. Mostrar todas las solicitudes (Ranking)" << std::endl;
+   // std::cout << "3. Mostrar todas las solicitudes" << std::endl;
     std::cout << "4. Salir" << std::endl;
         std::cin >> opcion;
 
@@ -341,11 +339,11 @@ int main() {
                 break;
 
             case 4:
-                std::cout << "\nSaldrás del programa. ¡Hasta luego!" << std::endl;
+                std::cout << "\nSaldrÃ¡s del programa. Â¡Hasta luego!" << std::endl;
                 break;
 
             default:
-                std::cout << "\nOpción inválida. Intente nuevamente." << std::endl;
+                std::cout << "\nOpciÃ³n invÃ¡lida. Intente nuevamente." << std::endl;
                 break;
         }
 
