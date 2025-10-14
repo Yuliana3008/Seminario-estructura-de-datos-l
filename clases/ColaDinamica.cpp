@@ -282,26 +282,15 @@ void elaborarConstancia(Cola<Solicitud>& cola){
     }
 }
 
-void verSolicitudesPendientes(const Cola<Solicitud>& cola){
-    if(cola.vacia()){
-        cout << "\nNo hay solicitudes pendientes." << endl;
-    }
-    else{
-        cout << "\n--- Solicitudes Pendientes ---" << endl;
-        cola.imprimir();
-    }
-}
-
 int main(){
     Cola<Solicitud> colaSolicitudes;
     int opcion;
 
     do{
-         cout << "1. Dar de alta solicitud" << endl;
+    cout << "1. Dar de alta solicitud" << endl;
     cout << "2. Elaborar constancia (atender solicitud)" << endl;
-    cout << "3. Ver solicitudes pendientes" << endl;
-    cout << "4. Salir" << endl;
-    cout << "Seleccione una opción: ";
+    cout << "3. Salir" << endl;
+    cout << "Seleccione una opcion: ";
         cin >> opcion;
 
         switch(opcion){
@@ -312,10 +301,7 @@ int main(){
                 elaborarConstancia(colaSolicitudes);
                 break;
             case 3:
-                verSolicitudesPendientes(colaSolicitudes);
-                break;
-            case 4:
-                cout << "\nSaliendo del sistema..." << endl;
+                cout << "\nSaldra del programa" << endl;
                 break;
             default:
                 cout << "\nOpción inválida. Intente nuevamente." << endl;
