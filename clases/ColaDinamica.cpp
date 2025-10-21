@@ -256,7 +256,7 @@ public:
     }
 };
 
-// Funciones del sistema
+// funciones
 
 
 void darAltaSolicitud(Cola<Solicitud>& cola){
@@ -288,7 +288,7 @@ int main(){
 
     do{
     cout << "1. Dar de alta solicitud" << endl;
-    cout << "2. Elaborar constancia (atender solicitud)" << endl;
+    cout << "2. Elaborar constancia" << endl;
     cout << "3. Salir" << endl;
     cout << "Seleccione una opcion: ";
         cin >> opcion;
