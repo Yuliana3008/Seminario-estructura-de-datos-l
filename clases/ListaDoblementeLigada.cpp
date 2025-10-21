@@ -194,34 +194,32 @@ public:
     void setDomicilio(string dom) { Domicilio = dom; }
     void setAnoIngreso(int anio) { AnoIngreso = anio; }
 
-    // Sobrecarga del operador ==
+    // Sobrecarga  ==
     bool operator==(const SocioClub& otro) const {
         return this->NumeroSocio == otro.NumeroSocio;
     }
 
-    // Sobrecarga del operador << para impresi�n
+    // Sobrecarga  <<
     friend ostream& operator<<(ostream& os, const SocioClub& socio){
-        os << "----------------------------------------\n";
+
         os << "Numero de Socio: " << socio.NumeroSocio << "\n";
         os << "Nombre: " << socio.NombreSocio << "\n";
         os << "Domicilio: " << socio.Domicilio << "\n";
-        os << "A�o de Ingreso: " << socio.AnoIngreso << "\n";
-        os << "----------------------------------------";
+        os << "Anio de Ingreso: " << socio.AnoIngreso << "\n";
         return os;
     }
 };
 
-// Funciones del men�
+// Funciones del menu
 void registrarSocio(LDLLSE<SocioClub>& lista){
     int num, anio;
     string nombre, domicilio;
 
-    cout << "\n=== REGISTRAR NUEVO SOCIO ===\n";
     cout << "Numero de Socio: ";
     cin >> num;
     cin.ignore();
 
-    // Verificar que no exista el n�mero de socio
+    // Verificacion
     SocioClub temp(num, "", "", 0);
     if(lista.localiza(temp) != nullptr){
         cout << "Error: Ya existe un socio con ese numero.\n";
@@ -232,7 +230,7 @@ void registrarSocio(LDLLSE<SocioClub>& lista){
     getline(cin, nombre);
     cout << "Domicilio: ";
     getline(cin, domicilio);
-    cout << "A�o de Ingreso: ";
+    cout << "Anio de Ingreso: ";
     cin >> anio;
 
     SocioClub nuevoSocio(num, nombre, domicilio, anio);
