@@ -199,19 +199,19 @@ public:
         return this->NumeroSocio == otro.NumeroSocio;
     }
 
-    // Sobrecarga del operador << para impresión
+    // Sobrecarga del operador << para impresiï¿½n
     friend ostream& operator<<(ostream& os, const SocioClub& socio){
         os << "----------------------------------------\n";
         os << "Numero de Socio: " << socio.NumeroSocio << "\n";
         os << "Nombre: " << socio.NombreSocio << "\n";
         os << "Domicilio: " << socio.Domicilio << "\n";
-        os << "Año de Ingreso: " << socio.AnoIngreso << "\n";
+        os << "Aï¿½o de Ingreso: " << socio.AnoIngreso << "\n";
         os << "----------------------------------------";
         return os;
     }
 };
 
-// Funciones del menú
+// Funciones del menï¿½
 void registrarSocio(LDLLSE<SocioClub>& lista){
     int num, anio;
     string nombre, domicilio;
@@ -221,7 +221,7 @@ void registrarSocio(LDLLSE<SocioClub>& lista){
     cin >> num;
     cin.ignore();
 
-    // Verificar que no exista el número de socio
+    // Verificar que no exista el nï¿½mero de socio
     SocioClub temp(num, "", "", 0);
     if(lista.localiza(temp) != nullptr){
         cout << "Error: Ya existe un socio con ese numero.\n";
@@ -232,7 +232,7 @@ void registrarSocio(LDLLSE<SocioClub>& lista){
     getline(cin, nombre);
     cout << "Domicilio: ";
     getline(cin, domicilio);
-    cout << "Año de Ingreso: ";
+    cout << "Aï¿½o de Ingreso: ";
     cin >> anio;
 
     SocioClub nuevoSocio(num, nombre, domicilio, anio);
